@@ -44,7 +44,9 @@ a {
 
 .hero {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  gap: 32px;
   align-items: center;
   min-height: 88svh;
   padding: 72px 7vw;
@@ -66,9 +68,26 @@ a {
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(720px, 100%);
   padding-block: 32px;
+}
+
+.hero__art {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  min-width: 0;
+  align-self: end;
+}
+
+.companions {
+  display: block;
+  width: min(430px, 100%);
+  height: auto;
+  filter: drop-shadow(0 24px 36px rgba(104, 43, 64, 0.16));
 }
 
 .eyebrow {
@@ -170,6 +189,7 @@ p {
 
 .intro,
 .reasons,
+.journey,
 .note {
   padding: 88px 0;
 }
@@ -226,6 +246,33 @@ p {
     var(--paper);
 }
 
+.journey {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 253, 249, 0.68), rgba(255, 253, 249, 0) 34%),
+    var(--paper);
+}
+
+.journey__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.journey__note {
+  padding: 28px;
+  border-left: 4px solid var(--gold);
+  background: rgba(255, 253, 249, 0.52);
+}
+
+.journey__note p {
+  color: #473f2d;
+}
+
+.journey__note p:last-child {
+  margin-bottom: 0;
+}
+
 .note__inner {
   max-width: 840px;
   padding-block: 14px;
@@ -271,8 +318,19 @@ footer p {
 
 @media (max-width: 900px) {
   .hero {
+    grid-template-columns: 1fr;
     min-height: 84svh;
     padding: 58px 28px;
+  }
+
+  .hero__art {
+    align-self: center;
+    justify-content: start;
+    margin-top: -18px;
+  }
+
+  .companions {
+    width: min(320px, 76vw);
   }
 
   h1 {
@@ -284,7 +342,8 @@ footer p {
   }
 
   .intro__grid,
-  .reason-grid {
+  .reason-grid,
+  .journey__grid {
     grid-template-columns: 1fr;
   }
 
@@ -320,8 +379,13 @@ footer p {
 
   .intro,
   .reasons,
+  .journey,
   .note {
     padding: 64px 0;
+  }
+
+  .journey__note {
+    padding: 22px;
   }
 
   .section-inner {
