@@ -112,6 +112,20 @@
       <p>Fait pour Giulia, et pour personne d'autre.</p>
     </footer>
 
+    <div class="music-player" data-music-player hidden>
+      <audio id="love-song" src="assets/perfect-symphony.mp3" preload="metadata" loop></audio>
+      <button
+        class="music-button"
+        type="button"
+        data-music-toggle
+        aria-controls="love-song"
+        aria-pressed="false"
+      >
+        <span class="music-button__icon" aria-hidden="true">♪</span>
+        <span data-music-label>Perfect Symphony</span>
+      </button>
+    </div>
+
     <script src="script.js" defer></script>
   </body>
 </html>
