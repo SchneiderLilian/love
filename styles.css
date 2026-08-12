@@ -1,13 +1,15 @@
 :root {
   color-scheme: light;
-  --ink: #272024;
-  --muted: #6f6267;
-  --paper: #fff7f1;
+  --ink: #302816;
+  --muted: #71674b;
+  --paper: #fff4ad;
+  --paper-soft: #fff9d6;
+  --paper-warm: #ffe98c;
   --rose: #bd5365;
   --coral: #eb8d72;
   --teal: #1f5f63;
   --wine: #682b40;
-  --gold: #d9a75d;
+  --gold: #c7962d;
   --white: #fffdf9;
   --shadow: 0 20px 60px rgba(39, 32, 36, 0.18);
 }
@@ -47,11 +49,10 @@ a {
   min-height: 88svh;
   padding: 72px 7vw;
   overflow: hidden;
-  color: var(--white);
+  color: var(--ink);
   background:
-    linear-gradient(90deg, rgba(40, 23, 31, 0.74), rgba(40, 23, 31, 0.24) 50%, rgba(40, 23, 31, 0.12)),
-    linear-gradient(0deg, rgba(40, 23, 31, 0.30), rgba(40, 23, 31, 0)),
-    url("assets/hero-love.png") center / cover no-repeat;
+    radial-gradient(circle at 78% 22%, rgba(255, 253, 249, 0.70), rgba(255, 253, 249, 0) 28%),
+    linear-gradient(135deg, var(--paper-soft), var(--paper) 48%, var(--paper-warm));
 }
 
 .hero::after {
@@ -59,7 +60,7 @@ a {
   inset: auto 0 0;
   height: 120px;
   content: "";
-  background: linear-gradient(0deg, var(--paper), rgba(255, 247, 241, 0));
+  background: linear-gradient(0deg, var(--paper-soft), rgba(255, 249, 214, 0));
   pointer-events: none;
 }
 
@@ -68,7 +69,6 @@ a {
   z-index: 1;
   width: min(720px, 100%);
   padding-block: 32px;
-  text-shadow: 0 2px 24px rgba(27, 18, 22, 0.34);
 }
 
 .eyebrow {
@@ -81,7 +81,7 @@ a {
 }
 
 .hero .eyebrow {
-  color: #ffe0bc;
+  color: var(--rose);
 }
 
 h1,
@@ -136,11 +136,11 @@ p {
   justify-content: center;
   min-height: 48px;
   padding: 0 22px;
-  border: 1px solid rgba(255, 253, 249, 0.54);
+  border: 1px solid rgba(104, 43, 64, 0.26);
   border-radius: 6px;
   color: var(--white);
-  background: rgba(255, 253, 249, 0.12);
-  box-shadow: 0 12px 34px rgba(28, 18, 22, 0.22);
+  background: var(--wine);
+  box-shadow: 0 12px 34px rgba(104, 43, 64, 0.18);
   font-weight: 800;
   text-decoration: none;
   text-shadow: none;
@@ -154,12 +154,12 @@ p {
 .button:hover,
 .button:focus-visible {
   transform: translateY(-2px);
-  border-color: rgba(255, 253, 249, 0.88);
-  background: rgba(255, 253, 249, 0.22);
+  border-color: rgba(104, 43, 64, 0.42);
+  background: #7b3450;
 }
 
 .button:focus-visible {
-  outline: 3px solid rgba(255, 224, 188, 0.72);
+  outline: 3px solid rgba(199, 150, 45, 0.46);
   outline-offset: 4px;
 }
 
@@ -187,7 +187,7 @@ p {
 }
 
 .reasons {
-  background: #f8ebe3;
+  background: var(--paper-soft);
 }
 
 .reason-grid {
@@ -203,7 +203,7 @@ p {
   border: 1px solid rgba(104, 43, 64, 0.14);
   border-radius: 8px;
   background: rgba(255, 253, 249, 0.76);
-  box-shadow: 0 16px 42px rgba(104, 43, 64, 0.08);
+  box-shadow: 0 16px 42px rgba(104, 43, 64, 0.07);
 }
 
 .reason__mark {
@@ -222,7 +222,7 @@ p {
 
 .note {
   background:
-    linear-gradient(90deg, rgba(31, 95, 99, 0.08), rgba(189, 83, 101, 0.10)),
+    linear-gradient(90deg, rgba(255, 253, 249, 0.42), rgba(235, 141, 114, 0.12)),
     var(--paper);
 }
 
@@ -248,7 +248,7 @@ footer {
   padding: 28px 20px 36px;
   text-align: center;
   color: var(--muted);
-  background: var(--white);
+  background: var(--paper-soft);
 }
 
 footer p {
@@ -273,7 +273,6 @@ footer p {
   .hero {
     min-height: 84svh;
     padding: 58px 28px;
-    background-position: 56% center;
   }
 
   h1 {
@@ -298,7 +297,6 @@ footer p {
   .hero {
     min-height: 82svh;
     padding: 44px 20px;
-    background-position: 62% center;
   }
 
   .hero__content {
