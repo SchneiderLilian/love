@@ -2,9 +2,9 @@
   color-scheme: light;
   --ink: #302816;
   --muted: #71674b;
-  --paper: #fff4ad;
-  --paper-soft: #fff9d6;
-  --paper-warm: #ffe98c;
+  --paper: #FFDE21;
+  --paper-soft: #fff0a3;
+  --paper-warm: #f7c600;
   --rose: #bd5365;
   --coral: #eb8d72;
   --teal: #1f5f63;
@@ -62,7 +62,7 @@ a {
   inset: auto 0 0;
   height: 120px;
   content: "";
-  background: linear-gradient(0deg, var(--paper-soft), rgba(255, 249, 214, 0));
+  background: linear-gradient(0deg, var(--paper-soft), rgba(255, 240, 163, 0));
   pointer-events: none;
 }
 
